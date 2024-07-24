@@ -1,15 +1,17 @@
 import {Helmet, HelmetProvider} from 'react-helmet-async';
-import {ThemeProvider} from 'styled-components';
+import {RouterProvider} from 'react-router-dom';
 
+import {router} from '@/routes/index';
 import {GlobalStyle} from '@/styles/global';
 import theme from '@/styles/themes';
+import {ThemeProvider} from 'styled-components';
 
 export function App() {
   return (
     <ThemeProvider theme={theme}>
       <HelmetProvider>
         <Helmet titleTemplate="%s | Ecommerce" />
-        <p>Ecomerce</p>
+        <RouterProvider router={router} />
         <GlobalStyle />
       </HelmetProvider>
     </ThemeProvider>

@@ -10,13 +10,29 @@ module.exports = {
   ],
   // ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh', 'simple-import-sort'],
+  plugins: [
+    'react-refresh',
+    'eslint-plugin-import-helpers',
+    "typescript-sort-keys",
+    "sort-destructure-keys"
+  ],
   rules: {
     'react-refresh/only-export-components': [
       'warn',
       {allowConstantExport: true},
     ],
-    'simple-import-sort/imports': 'error',
     'prettier/prettier': 'error',
+    'no-console': 'error',
+    'import-helpers/order-imports': [
+      'warn',
+      {
+        newlinesBetween: 'always',
+        groups: ['/^react/', 'module', '/^~/', ['parent', 'sibling', 'index']],
+        alphabetize: {
+          order: 'asc',
+          ignoreCase: true,
+        },
+      },
+    ],
   },
 };
