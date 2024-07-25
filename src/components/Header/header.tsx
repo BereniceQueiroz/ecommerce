@@ -4,8 +4,8 @@ import SVGCartIcon from '@/assets/cart.svg?react';
 import SVGLogo from '@/assets/logo.svg?react';
 import SVGMenuIcon from '@/assets/menu.svg?react';
 import SVGProfileIcon from '@/assets/user.svg?react';
+import {InputSearch} from '@/components/InputSearch/input-search';
 import {Menu} from '@/components/Menu/menu';
-import {InputSearch} from '@/components/ui/InputSearch/input-search';
 
 import {
   Brand,

@@ -13,8 +13,8 @@ module.exports = {
   plugins: [
     'react-refresh',
     'eslint-plugin-import-helpers',
-    "typescript-sort-keys",
-    "sort-destructure-keys"
+    'typescript-sort-keys',
+    'sort-destructure-keys',
   ],
   rules: {
     'react-refresh/only-export-components': [
