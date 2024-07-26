@@ -1,17 +1,22 @@
 import {css, styled} from 'styled-components';
 
 export const Wrapper = styled.div`
-  ${({theme}) => css`
-    width: 264px;
-    height: 434px;
-    background-color: ${theme.COLORS.GRAY_100};
-    margin: 0 auto;
-  `}
+  width: 264px;
+  height: 434px;
+  margin: 0 auto;
 `;
-export const Image = styled.img`
+
+export const ContentImage = styled.div`
+  display: flex;
+  justify-content: center;
   height: 70%;
   width: 100%;
-  object-fit: fill;
+`;
+
+export const Image = styled.img`
+  height: auto;
+  width: 100%;
+  object-fit: contain;
 `;
 
 export const AboutInfo = styled.div`
@@ -39,7 +44,6 @@ export const Content = styled.div`
     justify-content: flex-start;
     gap: 10px;
     background-color: ${theme.COLORS.WHITE};
-
     width: 100%;
   `}
 `;

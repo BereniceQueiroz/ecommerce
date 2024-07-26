@@ -132,10 +132,26 @@ export const Search = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
   ${media.greaterThan('large')`
     flex-direction: row;
     align-items: center;
     gap: 20px;
   `}
+`;
+
+export const CartBadge = styled.p`
+  position: absolute;
+  top: -10px;
+  right: -14px;
+  background-color: red;
+  color: white;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  padding: 2px;
+  font-size: 10px;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
 `;

@@ -10,6 +10,7 @@ import {Menu} from '@/components/Menu/menu';
 import {
   Brand,
   BrandTitle,
+  CartBadge,
   ContentDiscount,
   ContentHeader,
   List,
@@ -20,8 +21,9 @@ import {
   TextDiscount,
   Wrapper,
 } from './styles';
+import {HeaderProps} from './types';
 
-export function Header() {
+export function Header({productCount}: HeaderProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
@@ -54,6 +56,7 @@ export function Header() {
             <InputSearch onSearch={() => {}} />
             <MenuLink to="/cart">
               <SVGCartIcon />
+              {productCount > 0 && <CartBadge>{productCount}</CartBadge>}
             </MenuLink>
             <MenuLink to="#">
               <SVGProfileIcon />

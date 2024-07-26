@@ -10,6 +10,7 @@ import {
   Stock,
   Value,
   Wrapper,
+  ContentImage,
 } from './styles';
 
 interface CardProps {
@@ -20,7 +21,9 @@ interface CardProps {
 export function Card({product, onClick}: CardProps) {
   return (
     <Wrapper>
-      <Image src={product?.image} alt={product?.title} />
+      <ContentImage>
+        <Image src={product?.image} alt={product?.title} />
+      </ContentImage>
       <AboutInfo>
         <NameDescription>{product?.title}</NameDescription>
         <Content>
