@@ -5,18 +5,20 @@ export const Wrapper = styled.div`
     width: 264px;
     height: 434px;
     background-color: ${theme.COLORS.GRAY_100};
+    margin: 0 auto;
   `}
 `;
 export const Image = styled.img`
   height: 70%;
-  object-fit: contain;
+  width: 100%;
+  object-fit: fill;
 `;
 
 export const AboutInfo = styled.div`
   ${({theme}) => css`
     display: flex;
     flex-direction: column;
-    height: 30%;
+    height: 20%;
     padding: 10px;
     gap: 10px;
     background-color: ${theme.COLORS.WHITE};

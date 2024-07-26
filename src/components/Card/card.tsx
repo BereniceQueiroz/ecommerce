@@ -1,5 +1,7 @@
-import ImageCard from '@/assets/cover.png';
+import {ProductsItem} from '@/dtos/products';
+import {formatCurrency} from '@/utils/formatted';
 
+import {Button} from '../Button/button';
 import {
   AboutInfo,
   Image,
@@ -9,17 +11,24 @@ import {
   Value,
   Wrapper,
 } from './styles';
-export function Card() {
+
+interface CardProps {
+  product: ProductsItem;
+  onClick: () => void;
+}
+
+export function Card({product, onClick}: CardProps) {
   return (
     <Wrapper>
-      <Image src={ImageCard} alt={'Classic Monochrome Tees'} />
+      <Image src={product?.image} alt={product?.title} />
       <AboutInfo>
-        <NameDescription>Classic Monochrome Tees</NameDescription>
+        <NameDescription>{product?.title}</NameDescription>
         <Content>
           <Stock>IN STOCK</Stock>
-          <Value>R$35,00</Value>
+          <Value>{formatCurrency(product?.price)}</Value>
         </Content>
       </AboutInfo>
+      <Button onClick={onClick} label="Adicionar ao carrinho" />
     </Wrapper>
   );
 }
