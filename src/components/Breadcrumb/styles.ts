@@ -43,7 +43,7 @@ export const BreadcrumbItem = styled.li`
 export const BreadcrumbLink = styled(Link)<BreadcrumbLinkProps>`
   ${({theme, isActive}) => css`
     color: ${isActive ? theme.COLORS.BLACK : theme.COLORS.GRAY_200};
-    font-size: ${theme.FONT_SIZE.SM}
+    font-size: ${theme.FONT_SIZE.SM}px;
     text-decoration: none;
   `}
 `;

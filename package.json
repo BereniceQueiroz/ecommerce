@@ -8,7 +8,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "prettier": "npx prettier . --write",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "vitest"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -23,7 +24,9 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.51.11",
+    "@testing-library/dom": "^10.4.0",
     "axios": "^1.7.2",
+    "happy-dom": "^14.12.3",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "prettier": "3.3.3",
@@ -38,6 +41,8 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.0",
     "@types/node": "^20.14.12",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
@@ -58,6 +63,7 @@
     "husky": "^9.1.1",
     "lint-staged": "^15.2.7",
     "typescript": "^5.2.2",
-    "vite": "^5.3.4"
+    "vite": "^5.3.4",
+    "vitest": "^2.0.4"
   }
 }

@@ -76,7 +76,7 @@ export const List = styled.ul`
       width: 100%;
       height: auto;
       font-weight: 800;
-      font-size: ${theme.FONT_SIZE.XL};
+      font-size: ${theme.FONT_SIZE.XL}px;
       color: ${theme.COLORS.GRAY_300};
       padding: 0.5rem 1.875rem;
       cursor: pointer;
@@ -88,7 +88,7 @@ export const MenuLink = styled(Link)`
   ${({theme}) => css`
     position: relative;
     color: ${theme.COLORS.GRAY_300};
-    font-size: ${theme.FONT_SIZE.XL};
+    font-size: ${theme.FONT_SIZE.XL}px;
     text-decoration: none;
     text-align: left;
     &:hover {
